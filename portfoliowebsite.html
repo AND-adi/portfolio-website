@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+body{
+    margin: 0;
+    background-color: #e5e5e5;
+    background-image: url("/jeremy-bishop-G9i_plbfDgk-unsplash.jpg");
+}
+main{
+    width: min(1200px, 90vw);
+    margin: auto;
+}
+.slider{
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        #000 10% 90%,
+        transparent
+    );
+}
+.slider .list{
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+.slider .list .item{
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    transition: filter 0.5s;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1) - 10s)!important;
+}
+.slider .list .item img{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+@keyframes autoRun{
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+}
+.slider:hover .item{
+    animation-play-state: paused!important;
+    filter: grayscale(1);
+}
+.slider .item:hover{
+    filter: grayscale(0);
+}
+.slider[reverse="true"] .item{
+    animation: reversePlay 10s linear infinite;
+}
+@keyframes reversePlay{
+    from{
+        left: calc(var(--width) * -1);
+    }to{
+        left: 100%;
+    }
+}
+h1{
+    color:darkviolet;
+    text-align: center;
+}
+.welcome{
+    color: rgb(135, 110, 80);
+    text-align: center;
+    animation: myAnim linear both;
+    animation-timeline: view();
+    animation-range: entry 5% cover 70%;
+
+}
+@keyframes myAnim {
+    0% {
+                opacity: 0;
+                transform: translateY(200px) scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px) scale(1);
+            }
+}
+h2{
+    font-size: 40px;
+    background: linear-gradient(90deg, purple, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <h1>My Portfolio</h1>
+        <HEADER>
+            <img src="/Screenshot_2025-12-19_at_1.20.14_PM-removebg-preview.png" alt="" width="200px" style="display: block; margin: auto;">
+                <h2>Welcome to my portfolio website</h2> 
+        </HEADER>
+        <div class="slider" style="
+            --width: 100px;
+            --height: 50px;
+            --quantity: 10;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="/Screenshot 2025-12-19 at 12.33.11 PM.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="/Screenshot 2025-12-19 at 12.33.39 PM.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="/Screenshot 2025-12-19 at 12.34.05 PM.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="/Screenshot 2025-12-19 at 12.34.20 PM.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="/Screenshot 2025-12-19 at 12.34.24 PM.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="/Screenshot 2025-12-19 at 12.34.39 PM.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="/Screenshot 2025-12-19 at 12.37.13 PM.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="/Screenshot 2025-12-19 at 12.38.45 PM.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="/Screenshot 2025-12-19 at 12.38.00 PM.png" alt=""></div>
+                <div class="item" style="--position: 10"><img src="/Screenshot 2025-12-19 at 12.38.21 PM.png" alt=""></div>
+            </div>
+        </div>
+
+        <div class="slider" reverse="true" style="
+            --width: 200px;
+            --height: 200px;
+            --quantity: 9;
+        ">
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="/Screenshot 2025-12-19 at 7.28.41 PM.png" alt="hackathon certificate"></div>
+                <div class="item" style="--position: 2"><img src="/Screenshot 2025-12-19 at 7.34.14 PM.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="/Screenshot 2025-12-19 at 7.34.39 PM.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="/Screenshot 2025-12-19 at 7.35.21 PM.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="/Screenshot 2025-12-19 at 7.40.57 PM.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="/IMG_20250907_204552895_HDR.jpg" alt=""></div>
+                <div class="item" style="--position: 7"><img src="/IMG_1266.jpeg" alt=""></div>
+                <div class="item" style="--position: 8"><img src="/profile photo.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="/Screenshot 2025-12-19 at 12.33.11 PM.png" alt=""></div>
+            </div>
+        </div>
+    </main>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+
+    <div class="welcome">
+           <h2> Hi, I'm Aditya</h2>
+           <h3>I'm a skilled Software Developer also a quick learner who can easily collaborate with clients and push myself to fulfill required expectation. Check out my projects and skills.
+           </h3>
+    </div>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+
+
+
+
+    
+</body>
+</html>
