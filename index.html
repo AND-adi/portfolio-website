@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Aditya's Portfolio</title>
     <style>
 
 body{
@@ -72,7 +72,15 @@ main{
     }
 }
 h1{
-    color:darkviolet;
+    background: linear-gradient(90deg, rgb(46, 29, 233), rgb(101, 221, 251));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+}
+h3{
+    background: linear-gradient(90deg, purple, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
 }
 .welcome{
@@ -100,10 +108,53 @@ h2{
     -webkit-text-fill-color: transparent;
     text-align: center;
 }
+p{
+    text-align: center;
+    font-size: 20px;
+    background: linear-gradient(90deg, purple, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.description{
+    animation: myAnim2 linear both;
+    animation-timeline: view();
+     background: linear-gradient(90deg, purple, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 20px;
+}
+@keyframes myAnim2 {
+    0% { filter: blur(20px); opacity: 0; }
+    60%,100% { filter: blur(0px); opacity: 1; }
+    
+    
+}
+a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+footer{
+    text-align: center;
+    background: linear-gradient(90deg, rgb(188, 176, 188), rgb(49, 48, 48));
+}
+.work{
+    flex-wrap: wrap;
+    justify-content: center;;
+}
+strong{
+     background: linear-gradient(90deg, rgb(128, 138, 56), orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-size: 20px;
+    
+}
     </style>
 </head>
 <body>
     <main>
+
         <h1>My Portfolio</h1>
         <HEADER>
             <img src="/Screenshot_2025-12-19_at_1.20.14_PM-removebg-preview.png" alt="" width="200px" style="display: block; margin: auto;">
@@ -146,17 +197,31 @@ h2{
             </div>
         </div>
     </main>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-    <br><br><br>
-
+    <h1>ABOUT</h1>
     <div class="welcome">
-           <h2> Hi, I'm Aditya</h2>
+           <h3> Hi, I'm Aditya</h3>
            <h3>I'm a skilled Software Developer also a quick learner who can easily collaborate with clients and push myself to fulfill required expectation. Check out my projects and skills.
            </h3>
     </div>
+    <div class="description">
+        <h3>I'm passionate about creating innovative solutions and continuously improving my skills. I enjoy working on challenging projects that push the boundaries of technology.</h3>
+    </div>
+    <div class="description">
+        <p>
+            This is my personal portfolio website designed to highlight my projects, technical skills, and experience. Built with modern web technologies and a responsive layout to ensure a smooth experience on desktop, tablet, and mobile devices.
+
+        </p>
+    </div>
+    <br>
+       <h1>PROJECTS</h1>
+       <div class="work">
+           <div class="description">
+               <img src="/Screenshot 2025-12-19 at 7.35.21 PM.png" alt="" width="200px" style="display: block; margin: auto;"> 
+               <h3>Project 1: Website for children with ADHD or Dyslexia</h3>
+           </div>
+        </div>
+      <br>
+        <h1>PROJECT-02</h1>
     <br><br><br>
     <br><br><br>
     <br><br><br>
@@ -166,6 +231,16 @@ h2{
     <br><br><br>
     <br><br><br>
     <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <footer>
+        <h3>Contact me at:</h3>
+        <a href="mailto:adityanarayandash6006@gmail.com">adityanarayandash6006@gmail.com</a>
+    </footer>
+<br>
+
+     
 
 
 
